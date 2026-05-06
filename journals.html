@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journals | Manoj Library</title>
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --accent-color: #f57c00; /* Orange for Highlights */
+            --bg-light: #fdfdfd;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 30px 5%;
+            text-align: center;
+        }
+
+        nav {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            gap: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 30px;
+        }
+
+        /* Filter Sidebar */
+        .filter-sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .filter-sidebar h3 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .filter-group {
+            margin-bottom: 20px;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        /* Journal Cards */
+        .journal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .journal-card {
+            background: white;
+            display: flex;
+            padding: 20px;
+            border-radius: 8px;
+            gap: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .journal-thumb {
+            width: 100px;
+            height: 130px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .journal-info h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+        }
+
+        .journal-meta {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            background: #e8eaf6;
+            color: var(--primary-color);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .btn-view {
+            margin-top: 15px;
+            display: inline-block;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Academic Journals & Publications</h1>
+    <p>Browse through peer-reviewed journals and institutional archives</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="eresources.html">E-Resources</a>
+    <a href="#">Print Journals</a>
+    <a href="#">Open Access</a>
+</nav>
+
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="filter-sidebar">
+        <h3>Filter Journals</h3>
+        <div class="filter-group">
+            <label>Subject Area</label>
+            <select>
+                <option>All Subjects</option>
+                <option>Applied Science</option>
+                <option>Social Humanities</option>
+                <option>Business Management</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label>Year</label>
+            <select>
+                <option>2026</option>
+                <option>2025</option>
+                <option>2024</option>
+            </select>
+        </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="journal-list">
+        <h2 style="margin-top: 0;">Featured Journals</h2>
+
+        <!-- Journal Item 1 -->
+        <div class="journal-card">
+            <div class="journal-thumb">Cover Image<br>(Vol 24)</div>
+            <div class="journal-info">
+                <span class="tag">QUARTERLY</span>
+                <h3>International Journal of Engineering Research</h3>
+                <p class="journal-meta">ISSN: 2045-321X | Volume 24, Issue 2 | May 2026</p>
+                <p style="font-size: 14px; color: #555;">This issue covers the latest breakthroughs in AI, Sustainable Energy, and Nanotechnology.</p>
+                <a href="#" class="btn-view">View Table of Contents →</a>
+            </div>
+        </div>
+
+        <!-- Journal Item 2 -->
+        <div class="journal-card">
+            <div class="journal-thumb">Cover Image<br>(Vol 12)</div>
+            <div class="journal-info">
+                <span class="tag">MONTHLY</span>
+                <h3>Manoj Library Journal of Social Science</h3>
+                <p class="journal-meta">ISSN: 1022-9901 | Volume 12, Issue 5 | April 2026</p>
+                <p style="font-size: 14px; color: #555;">Focusing on local history, cultural heritage, and modern sociological trends in India.</p>
+                <a href="#" class="btn-view">View Table of Contents →</a>
+            </div>
+        </div>
+
+        <!-- Journal Item 3 -->
+        <div class="journal-card">
+            <div class="journal-thumb">Cover Image<br>(Vol 08)</div>
+            <div class="journal-info">
+                <span class="tag">ANNUAL</span>
+                <h3>Journal of Advanced Physics</h3>
+                <p class="journal-meta">ISSN: 5567-1234 | Volume 08 | 2026</p>
+                <p style="font-size: 14px; color: #555;">An annual compilation of high-impact research papers from the Department of Physics.</p>
+                <a href="#" class="btn-view">View Table of Contents →</a>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 Manoj Library | Academic Journal Portal</p>
+</footer>
+
+</body>
+</html>
