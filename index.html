@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj Library | Central Library Management</title>
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #c62828;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+        }
+
+        /* Top Header */
+        .top-nav {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* --- SCROLLING NOTICE SECTION --- */
+        .news-ticker {
+            background: #f1f1f1;
+            border-bottom: 1px solid #ddd;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .news-label {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            z-index: 2;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .ticker-content {
+            white-space: nowrap;
+            padding-left: 100%;
+            display: inline-block;
+            animation: scroll-left 25s linear infinite;
+        }
+
+        .ticker-content span {
+            padding-right: 50px;
+            font-size: 15px;
+            color: #333;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .ticker-content:hover {
+            animation-play-state: paused; /* Mouse rakhle scroll theme jabe */
+        }
+
+        /* Rest of the styles... */
+        nav { background: #fff; border-bottom: 3px solid var(--secondary-color); padding: 10px 5%; display: flex; gap: 20px; }
+        nav a { text-decoration: none; color: #333; font-weight: bold; font-size: 14px; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1350&q=80'); background-size: cover; padding: 50px 20px; text-align: center; color: white; }
+        .main-container { display: grid; grid-template-columns: 3fr 1.2fr; gap: 30px; padding: 30px 5%; }
+        table { width: 100%; background: white; border-collapse: collapse; }
+        th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
+        th { background: var(--primary-color); color: white; }
+        .sidebar-widget { background: white; padding: 20px; border-radius: 5px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+<div class="top-nav">
+    <div class="logo-area">
+        <h1>MANOJ LIBRARY</h1>
+    </div>
+    <div>Member Login | Register</div>
+</div>
+
+<!-- SCROLLING NOTICE -->
+<div class="news-ticker">
+    <div class="news-label">LATEST NEWS</div>
+    <div class="ticker-content">
+        <span>📢 Library timing extended for upcoming exams (9 AM to 10 PM).</span>
+        <span>📖 New collection of 500+ E-books added to the digital catalog.</span>
+        <span>⚠️ Membership renewal deadline is May 15th, 2026.</span>
+        <span>🌟 Special seminar on "Effective Research Skills" this Friday.</span>
+    </div>
+</div>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">E-Resources</a>
+    <a href="#">Journals</a>
+    <a href="#">Rules</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="hero">
+    <h2>Search the Library Catalog</h2>
+    <div style="margin-top: 15px;">
+        <input type="text" placeholder="Search Books..." style="padding: 10px; width: 40%;">
+        <button style="padding: 10px 20px; background: var(--secondary-color); color: white; border: none;">SEARCH</button>
+    </div>
+</div>
+
+<div class="main-container">
+    <section>
+        <h2 style="border-bottom: 2px solid var(--primary-color);">Book Collection</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Call No.</th>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>823.9/RAY</td><td>Pather Panchali</td><td>Bibhutibhushan B.</td></tr>
+                <tr><td>621.3/SEN</td><td>Electrical Engineering</td><td>P.K. Sen</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <aside>
+        <div class="sidebar-widget">
+            <h3 style="color: var(--secondary-color);">Upcoming Events</h3>
+            <p style="font-size: 14px;">- Book Fair (May 20)<br>- Literacy Day (June 08)</p>
+        </div>
+    </aside>
+</div>
+
+<footer style="background: #222; color: #ccc; text-align: center; padding: 15px;">
+    <p>&copy; 2026 Manoj Library</p>
+</footer>
+
+</body>
+</html>
